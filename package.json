@@ -22,5 +22,4 @@
     "postinstall": "yarn run build && yarn run deploy && echo 'Client built!'"
   }
 
-
 }
