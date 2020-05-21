@@ -17,8 +17,8 @@
   },
 
   "scripts": {
-    "build": "yarn install && yarn run build && cd client && yarn install && yarn add react-redux && yarn run build && cd ..",
-    "deploy": "cp -a client/build/. tmp/",
+    "build": "cd client && yarn install && yarn add react-redux && yarn run build && cd ..",
+    "deploy": "cp -a client/build/. public/",
     "postinstall": "yarn run build && yarn run deploy && echo 'Client built!'"
   }
 
