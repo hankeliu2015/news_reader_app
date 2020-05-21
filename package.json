@@ -17,12 +17,9 @@
   },
 
   "scripts": {
-      "dev": "react-scripts start",
-      "start": "serve -s build",
-      "build": "react-scripts build",
-      "test": "react-scripts test --env=jsdom",
-      "eject": "react-scripts eject",
-      "heroku-postbuild": "npm run build"
-    }
+      "build": "cd client && yarn install && yarn add && yarn run build && cd ..",
+      "deploy": "cp -a client/build/. public/",
+      "postinstall": "yarn run build && yarn run deploy && echo 'Client built!'"
+    },
 
 }
